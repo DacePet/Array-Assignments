@@ -1,19 +1,16 @@
 package com.company;
-import java.util.Scanner;
+import java.util.Arrays;
 public class Main {
-
     public static void main(String[] args) {
+        {
+            int[] arrOne = {1, 9, 5, 7, 6};
+                        System.out.println(Arrays.toString(arrOne));
+
+            arrOne[1] = 0;
+            for (int i = 0; i < arrOne.length; i++)
                 {
-                    String[] arrOne = {"NifNif", "NafNaf", "NufNuf"};
-                    for (String piggyUser : arrOne) {
-                        System.out.println(piggyUser);
-
-
-                    }
-                    for (int i = 0; i < arrOne.length; i++) {
-                        arrOne[i] = "Pig" + i;
-                        System.out.println(arrOne[i]);
-                    }
-                }
+                System.out.println(arrOne[i]);
             }
         }
+    }
+}
