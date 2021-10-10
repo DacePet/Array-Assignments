@@ -16,6 +16,7 @@ public class Array2 {
         System.out.println("Odd elements: ");
         odd(arrOne);
         System.out.println();
+        System.out.println("Number of odd elements: ");
         oddQty(arrOne);
         System.out.println();
         System.out.println("Multiple elements with same value: ");
@@ -24,6 +25,7 @@ public class Array2 {
         System.out.println("Each second element: ");
         eachSecond(arrOne);
         System.out.println();
+        System.out.println("Average value of elements: ");
         average(arrOne);
         System.out.println();
         System.out.println("Number of elements smaller than average: ");
@@ -55,7 +57,7 @@ public class Array2 {
             if (arrOne[i] % 2 == 1)
                 odd_count++;
         }
-        System.out.println("Number of odd elements: " + odd_count);
+        System.out.println(odd_count);
     }
 
     public static void sameValue(int[] arrOne) {
@@ -81,7 +83,7 @@ public class Array2 {
         for (int i = 0; i < arrOne.length; i++)
             avg += arrOne[i];
         avg = avg / arrOne.length;
-        System.out.println("Average value of elements: " + avg);
+        System.out.println(avg);
         return avg;
     }
 
