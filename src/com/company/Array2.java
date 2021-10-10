@@ -28,7 +28,7 @@ public class Array2 {
         System.out.println("Average value of elements: ");
         average(arrOne);
         System.out.println();
-        System.out.println("Number of elements smaller than average: ");
+        System.out.println("Average value and Number of elements smaller than average: ");
         lessThanAverage(arrOne);
 
 
