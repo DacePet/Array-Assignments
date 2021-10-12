@@ -40,7 +40,7 @@ public class Array1 {
         do {
             System.out.println(arrSimple[i]);
             i++;
-        } while (i < arrSimple.length);
+        } while (i<arrSimple.length);
     }
 }
 

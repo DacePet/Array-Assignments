@@ -1,11 +1,5 @@
 package com.company;
 
-// import java.util.Scanner;
-
-import java.util.Arrays;
-
-import java.math.RoundingMode;
-
 public class Array2 {
     public static void main(String[] args) {
         int[] arrOne = {10, 4, -4, 7, 0, 9, 1, 3, 7, -5};
