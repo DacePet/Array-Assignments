@@ -1,11 +1,11 @@
 package com.company;
 
-import javax.swing.plaf.synth.SynthOptionPaneUI;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-import java.util.Arrays;
-import java.util.ArrayList;
-import java.util.List;
+//import javax.swing.plaf.synth.SynthOptionPaneUI;
+//import java.util.regex.Matcher;
+//import java.util.regex.Pattern;
+//import java.util.Arrays;
+//import java.util.ArrayList;
+//import java.util.List;
 
 
 public class String1 {
