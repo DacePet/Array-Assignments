@@ -1,7 +1,7 @@
 package com.company;
 
 public class String2 {
-    public static void main [String[] args]
+    public static void main (String[] args)
 
     {
 
