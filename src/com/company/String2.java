@@ -9,30 +9,42 @@ import java.util.regex.Pattern;
 public class String2 {
     public static void main(String[] args) {
         String sentence = "Climb mountains not so the world can see you, but so you can see the world.";
+        String arrName[] = sentence.split(" ");
+        System.out.println("There are " + arrName.length + " words in the sentence.");
 
-        // QUESTION: if I havent [] in array line, I dont  undertand, how to call the String "sentence" in Method.
-        //1.
-        int numWords = (sentence.split("\\s+")).length;
-        System.out.println("There are " + numWords + " words in the sentence.");
-
-        //StringTokenizer text = new StringTokenizer("Climb mountains not so the world can see you, but so you can see the world");
-        //System.out.println("How many words are in sentence: " + text.countTokens());
-//2.
         Pattern pattern = Pattern.compile(" the ");
         Matcher matcher = pattern.matcher(sentence);
         int count = 0;
-        while (matcher.find())
-            count++;
-        System.out.println("There are " + count + " times used 'the' in the sentence.");
+        count++;
+        System.out.println("There are " + count+ " times used 'the' in the sentence.");
+
+        for (int i = 0; i < sentence.length(); i++)
+        if (sentence.contains("s"))
+        count++;
+         {
+        System.out.println(count + " words consist letter 's'."); //TODO Error, counts only until comma.
+         }
+    }
+}
+
+//2.
+ //   public static void qtyThe(String[] arrThe) {
+   //     Pattern pattern = Pattern.compile(" the ");
+     //   Matcher matcher = pattern.matcher(arrThe);
+       // int count = 0;
+        //while (matcher.find())
+          //  count++;
+        //System.out.println("There are " + count + " times used 'the' in the sentence.");
+    //}
 
 //3.
         //int count = 0;
         //for (int i = 0; i < sentence.length(); i++)
-        if (sentence.contains("s"))
-            count++;
-        {
-            System.out.println(count + " words consist letter 's'."); //TODO Error, counts only until comma.
-        }
+        // X  if (sentence.contains("s"))
+            //count++;
+       // {
+         //   System.out.println(count + " words consist letter 's'."); //TODO Error, counts only until comma.
+       // }
 
         //4.
               // int i = 0;
@@ -41,7 +53,7 @@ public class String2 {
 
         //while (matcher.find())
           //  return multiple;
-        System.out.println("Words XXX, YYY, ZZZ are repeated multiple times in the sentence.");
+        //System.out.println("Words XXX, YYY, ZZZ are repeated multiple times in the sentence.");
        // System.out.println(sentence[i]);
         //TODO
       // int i = 0;
@@ -53,8 +65,7 @@ public class String2 {
     //    System.out.println(sentence.equals(builder));
       //  System.out.println(sentence.contentEquals(builder));
         //5.
-        String replaceString = sentence.replace("you", "You");
-        System.out.println(replaceString);
+        //String replaceString = sentence.replace("you", "You");
+        //System.out.println(replaceString);
 
-    }
-}
+    //}
