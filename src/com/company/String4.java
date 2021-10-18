@@ -6,53 +6,37 @@ import java.util.*;
 public class String4 {
     public enum Suit {SPADES, CLUBS, HEARTS, DIAMONDS}
 
-    public enum Values {Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen, King}
+    public enum Values {Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen, King, Ace}
 
     public static void main(String[] args) {
+        // cardsSet();
+        System.out.println(Arrays.toString(cardsSet()));
+        System.out.println();
+        //  shuffleBySuit();
+        System.out.println(shuffleBySuit());
+    }
 
+    public static String[] cardsSet() {
+        int c = 0;
+        String[] TheDeck = new String[52];
         for (Suit suit : Suit.values()) {
-            for (Values values : Values.values())
-                System.out.println(suit + " " + values);
-            System.out.println();
-        }
-
-        List<Suit> shuffled = Arrays.asList(Suit.values());
-        List<Values> shuffled2 = Arrays.asList(Values.values());
-        Collections.shuffle(shuffled);
-        Collections.shuffle(shuffled2);
-        for (Suit msg : shuffled) {
-            for (Values val : shuffled2) {
-                System.out.println(msg + " " + val);
+            for (Values val : Values.values()) {
+                TheDeck[c] = suit.toString() + " " + val.toString();
+                c++;
             }
         }
+        return TheDeck;
+    }
+
+    public static List<String> shuffleBySuit() {
+        List<String> shuffledCards = Arrays.asList(cardsSet());
+        Collections.shuffle(shuffledCards);
+        return shuffledCards;
     }
 }
-//////////// version from https://docs.oracle.com/javase/8/docs/technotes/guides/language/enums.html
-// also check https://www.coderscampus.com/enums/
 
-// private final Suit suit;
-//private final Values value;
-//private String4 (Suit suit, Values value) {
-//  this.suit = suit;
-//this.value = value;
-//  }
 
-//public Suit suit() { return suit; }
-//public Values value () { return value; }
-//public String toString() { return value + " of " + suit; }
 
-//  private static final List<String4> protoDeck = new ArrayList<String4>();
 
-// Initialize prototype deck
-//  static {
-//    for (Suit suit : Suit.values())
-//      for (Values val : Values.values())
-//        protoDeck.add(new String4(suit, val));
-//}
-
-//public static ArrayList<String4> newDeck() {
-//return new ArrayList<String4>(protoDeck); // Return copy of prototype deck
-//}
-//}
 
 
