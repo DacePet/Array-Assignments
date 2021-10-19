@@ -1,5 +1,6 @@
 package com.company;
 
+import java.io.ByteArrayOutputStream;
 import java.io.Console;
 import java.util.Scanner;
 import java.util.Arrays;
@@ -7,36 +8,30 @@ import java.util.Arrays;
 
 public class Array3 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        byte[] arrGrades = new byte[10];
+        byte[] gradeArray = new byte[3];
+       // enterGrades(gradeArray);
+ //   }
 
-        for (int i = 0; i < arrGrades.length; i=i+1) {
-            System.out.println("Enter test results of 10 sudents (range 0-10): ");
-            byte grade = sc.nextByte();
-          while (true) {
-              if (sc.hasNextShort());
 
-            //   if (arrGrades[i] >= 0 && arrGrades[i] <= 10) {
-              {
-                  System.out.println(arrGrades[i]);
-              }
+   // public static void enterGrades(byte[] gradeArray) {
+        int i = 0;
+        int studentNo = 1;
 
-            break;
+                while (true){
+            System.out.println("Please enter student No. " + studentNo + "  grade.");
+            Scanner input = new Scanner(System.in);
+            byte grade = input.nextByte();
+                    studentNo++;
+            if (studentNo <= gradeArray.length && grade >= 0 && grade <= 10)
+                System.out.println("Student No. " + studentNo + " grade: " + grade);
+                      else
+                System.out.println("Wrong input");
         }
+            }
+        //  for (int i = 0; i < gradeArray.length; i++) {
+        //    if (grade<0 || grade>10) {
+        //      System.out.println("Wrong input");
+       }
 
-    }
 
-//sc.hasNextShort()
-    //  byte grade = sc.nextByte();
-    //int validGrade = 0;
-    //for (int i = 0; i < arrGrades.length; i++) {
-//if (arrGrades[i]>=0 && arrGrades[i]<=10){
-// byte validGrade =  gradeValidation();
-//return = validGrade;
-}
-// }
-//for (int i = 0; i < arrGrades.length; i++) {
-//         System.out.println("Correct entries: " + arrGrades[i]);
-
-}
 
