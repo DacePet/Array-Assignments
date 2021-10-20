@@ -9,29 +9,23 @@ import java.util.Arrays;
 public class Array3 {
     public static void main(String[] args) {
         byte[] gradeArray = new byte[3];
-       // enterGrades(gradeArray);
- //   }
+        //  enterGrades(gradeArray);
+        //}
 
+        // public static void enterGrades(byte[] gradeArray) {
+        Scanner input = new Scanner(System.in);
 
-   // public static void enterGrades(byte[] gradeArray) {
-        int i = 0;
-        int studentNo = 1;
+        System.out.println("Please enter grades of 10 students.");
 
-                while (true){
-            System.out.println("Please enter student No. " + studentNo + "  grade.");
-            Scanner input = new Scanner(System.in);
-            byte grade = input.nextByte();
-                    studentNo++;
-            if (studentNo <= gradeArray.length && grade >= 0 && grade <= 10)
-                System.out.println("Student No. " + studentNo + " grade: " + grade);
-                      else
-                System.out.println("Wrong input");
+        for (int i = 0; i < gradeArray.length; i++) {
+            gradeArray[i] = input.nextByte();
         }
-            }
-        //  for (int i = 0; i < gradeArray.length; i++) {
-        //    if (grade<0 || grade>10) {
-        //      System.out.println("Wrong input");
-       }
+        System.out.println("Here are all grades: ");
 
+        for (int i = 0; i < gradeArray.length; i++) {
+            //   if (gradeArray[i] >= 0 && gradeArray[i]<=10) {
+            System.out.println(gradeArray[i]);
+        }
+    }
 
-
+}
