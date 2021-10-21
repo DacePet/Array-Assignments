@@ -8,11 +8,12 @@ import java.util.Arrays;
 
 public class Array3 {
     public static void main(String[] args) {
-        byte[] gradeArray = new byte[4];
-
+        byte[] gradeArray = new byte[10];
         enterGrades(gradeArray);
-       failedStudents(gradeArray);
-        //excellentStudents(gradeArray);
+        System.out.println();
+        failedStudents(gradeArray);
+        excellentStudents(gradeArray);
+       // histogramGrades(gradeArray);
     }
 
     public static void enterGrades(byte[] gradeArray) {
@@ -22,50 +23,50 @@ public class Array3 {
         for (int i = 0; i < gradeArray.length; i++) {
             gradeArray[i] = input.nextByte();
             if (gradeArray[i] < 0 || gradeArray[i] > 10) {
-                System.out.println("Check entries");
+                System.exit(0);
             }
         }
-
         System.out.println("Here are all valid grades' entries: ");
-
         for (int i = 0; i < gradeArray.length; i++) {
-            if (gradeArray[i] >= 0 && gradeArray[i] <= 10) {
-
-                System.out.println(i + 1 + ". " + gradeArray[i]);
-                //return; - if return, it stops at first result
-            } else {
-                System.out.println(i + 1 + ". Check your entries.");
-            }
+            System.out.println(i + 1 + ". " + gradeArray[i]);
         }
     }
 
 
-    public static void failedStudents ( byte[] gradeArray){
-    int i = 0;
-    int count = 0;
-     count++;
-    //for (int i = 0; i < gradeArray.length; i++) {
-      if (gradeArray[i] >= 0 && gradeArray[i] < 4) {
+    public static void failedStudents(byte[] gradeArray) {
+        int count = 0;
+        for (int i = 0; i < gradeArray.length; i++) {
+            if (gradeArray[i] < 4)
+                count++;
+        }
         System.out.println(count + " student(s)  failed.");
-    //TODO Not counting
-    //}
+        System.out.println();
 
-
-    //public static void excellentStudents(byte[] gradeArray) {
-      //  int i = 0;
-        //int count = 0;
-        //count++;
-        //switch (gradeArray[i]) {
-          //  case 10:
-            //    System.out.println(count + " student(s)  got 'A'.");
-              //  break;
-            //default:
-              //  System.out.println("No student got 'A'.");
-
-
-        }
     }
+
+    public static void excellentStudents(byte[] gradeArray) {
+        int counter = 0;
+        for (int i = 0; i < gradeArray.length; i++) {
+            if (gradeArray[i] == 10)
+                counter++;
+        }
+        System.out.println(counter + " student(s)  got 'A'.");
+        System.out.println();
+    }
+
+  //  public static void histogramGrades(byte[] gradeArray) {
+   //     int i = 0;
+     //   byte gradeArray[i] =0;
+       // while (gradeArray[i]<=10) {
+         //   int counting = 0;
+           // for (gradeArray[i] :gradeArray){
+             //   if (gradeArray[i] == i) {
+               //     counting++;
+                //}
+                //System.out.println(counting + " students with the grade " + gradeArray[i]);
+                //gradeArray[i]++;
+            //}
+     //   }
+    //}
 }
-
-
 
