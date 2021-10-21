@@ -1,46 +1,66 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class DataStr1 {
     public static void main(String[] args) {
-        ArrayList<String> words = new ArrayList<String>();
-        ArrayList<String> resultC = new ArrayList<String>();
-        words.add("Computer");
-        words.add("Plate");
-        words.add("Chair");
-        words.add("Girl");
-        words.add("Boy");
-        words.add("Dog");
-        words.add("Shirt");
-        words.add("Determination");
+        ArrayList<String> wordsRandom = new ArrayList<String>();
+        wordsRandom.add("Computer");
+        wordsRandom.add("Plate");
+        wordsRandom.add("Chair");
+        wordsRandom.add("Girl");
+        wordsRandom.add("Boy");
+        wordsRandom.add("Dog");
+        wordsRandom.add("Shirt");
+        wordsRandom.add("Determination");
+
 
 // count words, that start with C
-        int count = 0;
-        for (String i : words) {
-            if (i.startsWith("C")) {
-                count++;
-                System.out.println("How many words start with 'C': " + count);
-                //TODO printing each count, should do  just the final.
-            }
-              }
+        int countC = 0;
+        for (String i : wordsRandom) {
+            if (i.startsWith("C"))
+                countC++;
+        }
+        System.out.println("How many words start with 'C': " + countC);
+
 // count words, that contain E
-int counter = 0;
-        for (String i : words) {
-            if (i.contains("e")) {
-                counter++;
-                System.out.println("How many words contain 'e': " + counter);
-                //TODO printing each count, should do  just the final.
-                         }
+        int countEend = 0;
+        for (String i : wordsRandom) {
+            if (i.endsWith("e"))
+                countEend++;
         }
+        System.out.println("How many words end with 'e': " + countEend);
+
 // count words fo 5 letters;
-        int countcount = 0;
-        for (String i : words) {
-            if (i.length()==5) {
-                countcount++;
-                System.out.println("How many words consist from 5 letters: " + countcount);
-                //TODO printing each count, should do  just the final.
+        int countFive = 0;
+        for (String i : wordsRandom) {
+            if (i.length() == 5)
+                countFive++;
+        }
+        System.out.println("How many words consist from 5 letters: " + countFive);
+
+        int countE = 0;
+        for (String i : wordsRandom) {
+            if (i.contains("e"))
+                countE++;
+        }
+        System.out.println("How many words contain 'e': " + countE);
+
+        System.out.println("Are there any values which consist of the subString 'te': ");
+        // TODO Should be one YES or NO
+
+        for (String i : wordsRandom) {
+            if (i.contains("te")) {
+                System.out.println("No");
+            } else {
+                System.out.println("Yes");
             }
         }
+        //TODO Histogram...
+
+        //printount ascending
+        Collections.sort(wordsRandom);
+        System.out.println("Words in ascending order: " + wordsRandom);
     }
 }

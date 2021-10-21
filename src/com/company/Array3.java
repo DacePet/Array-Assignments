@@ -13,7 +13,7 @@ public class Array3 {
         System.out.println();
         failedStudents(gradeArray);
         excellentStudents(gradeArray);
-       // histogramGrades(gradeArray);
+        // histogramGrades(gradeArray);
     }
 
     public static void enterGrades(byte[] gradeArray) {
@@ -32,7 +32,6 @@ public class Array3 {
         }
     }
 
-
     public static void failedStudents(byte[] gradeArray) {
         int count = 0;
         for (int i = 0; i < gradeArray.length; i++) {
@@ -41,7 +40,6 @@ public class Array3 {
         }
         System.out.println(count + " student(s)  failed.");
         System.out.println();
-
     }
 
     public static void excellentStudents(byte[] gradeArray) {
@@ -51,22 +49,21 @@ public class Array3 {
                 counter++;
         }
         System.out.println(counter + " student(s)  got 'A'.");
-        System.out.println();
     }
 
-  //  public static void histogramGrades(byte[] gradeArray) {
-   //     int i = 0;
-     //   byte gradeArray[i] =0;
-       // while (gradeArray[i]<=10) {
-         //   int counting = 0;
-           // for (gradeArray[i] :gradeArray){
-             //   if (gradeArray[i] == i) {
-               //     counting++;
-                //}
-                //System.out.println(counting + " students with the grade " + gradeArray[i]);
-                //gradeArray[i]++;
-            //}
-     //   }
+    //  public static void histogramGrades(byte[] gradeArray) {
+    //     int i = 0;
+    //   byte gradeArray[i] =0;
+    // while (gradeArray[i]<=10) {
+    //   int counting = 0;
+    // for (gradeArray[i] :gradeArray){
+    //   if (gradeArray[i] == i) {
+    //     counting++;
+    //}
+    //System.out.println(counting + " students with the grade " + gradeArray[i]);
+    //gradeArray[i]++;
+    //}
+    //   }
     //}
 }
 
